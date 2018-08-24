@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="You can't math and binary when MLG intensifies!">
+		<meta name="keywords" content="mlg, you cant math, you cant binary, usvsth3m, autism intensifies">
+
+		<link href="assets/gaem.css" type="text/css" rel="stylesheet">
+		<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,700italic,400italic&amp;subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+
+		<!-- Plz use your own CDNs -->
+		<script src="https://static.https.cat/js/jquery.js" type="text/javascript"></script>
+		<script src="https://static.https.cat/js/pixi.js" type="text/javascript"></script>
+		<script src="https://static.https.cat/js/soundmanager2.js" type="text/javascript"></script>
+
+		<script src="assets/mah-boi.js" type="text/javascript"></script>
+		<script src="assets/yaebal.js" type="text/javascript"></script>
+		<script src="assets/lisn2me.js" type="text/javascript"></script>
+
+
+		<title>YOU CANT %s WHEN MLG INTENSIFIES</title>
+	</head>
+	<body>
+		<div id="bgcanvas"></div>
+		<div id="content">
+			<div id="loading" class="centered">	
+				<div class="game-task">
+					Loading resources, plz wait
+				</div>
+
+				<div class="timer">
+					<div id="resource-name">Initializing...</div>
+					<div id="loading-gauge-handle" class="gauge-handle"><div id="loading-gauge" class="gauge"></div></div>
+				</div>
+			</div>
+
+			<div id="startscreen" class="centered">	
+				<div class="game-task" id="start-text">
+					You can't %s under <span style="font-family: 'Comic Sans MS', cursive, Sans-Serif;">MLG</span>!
+				</div>
+				<div id="epilepsy-warning">This game can cause an epileptic seizure.</div>
+
+				<div class="start-button" onclick="game_start('math')">
+					I CAN MATH
+				</div>
+				<div class="start-button" onclick="game_start('binary')">
+					I CAN BINARY
+				</div>
+			</div>
+
+			<div id="game" class="centered">	
+				<div class="game-task">
+					<span class="operand" id="operand-1">110010</span>
+					<span class="operator" id="operator">xor</span>
+					<span class="operand" id="operand-2">001010</span>
+				</div>
+
+				<div class="variants">
+					<div class="game-variant" id="game-variant-1" onclick="game_checkTask(1)"></div>
+					<div class="game-variant" id="game-variant-2" onclick="game_checkTask(2)"></div>
+				</div>
+
+				<div id="game-hint">
+					<span class="hint-button" title="Left arrow key">&larr;</span> left answer ~ right answer <span class="hint-button" title="Right arrow key">&rarr;</span>
+				</div>
+
+				<div class="timer">
+					Time left (ms): <span id="timer-num"></span>
+					<div id="timer-gauge-handle" class="gauge-handle"><div id="timer-gauge" class="gauge"></div></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
